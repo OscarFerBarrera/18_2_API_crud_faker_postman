@@ -1,0 +1,37 @@
+{
+  "name": "18_2_api_crud_faker_postman",
+  "version": "1.0.0",
+  "description": "Ejercicio API crud + faker + postman",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "seed:books": "node ./seeds/book.seed.js",
+    "prepare": "husky",
+    "lint": "eslint",
+    "start": "node --watch index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OscarFerBarrera/18_2_API_crud_faker_postman.git"
+  },
+  "author": "Oscar Barrera",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/OscarFerBarrera/18_2_API_crud_faker_postman/issues"
+  },
+  "homepage": "https://github.com/OscarFerBarrera/18_2_API_crud_faker_postman#readme",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.19.0",
+    "mongodb": "^6.5.0",
+    "mongoose": "^8.2.2"
+  },
+  "devDependencies": {
+    "eslint": "^8.57.0",
+    "eslint-config-standard": "^17.1.0",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-n": "^16.6.2",
+    "eslint-plugin-promise": "^6.1.1",
+    "husky": "^9.0.11"
+  }
+}

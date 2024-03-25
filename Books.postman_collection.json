@@ -1,0 +1,142 @@
+{
+	"info": {
+		"_postman_id": "1273b7d5-7257-4589-a26e-7786f9c97552",
+		"name": "Books",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "33332874"
+	},
+	"item": [
+		{
+			"name": "Home",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "localhost:3000/"
+			},
+			"response": []
+		},
+		{
+			"name": "Todos los libros",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "{{base_url}}/book"
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar por ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "{{base_url}}/book/6601970f589a753e4d1342df"
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar por titulo",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "{{base_url}}/book/title/1984"
+			},
+			"response": []
+		},
+		{
+			"name": "Crear un Libro",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"Mi primer libro\",\n    \"author\": \"Desconocido..\",\n    \"pages\": 1230\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{base_url}}/book"
+			},
+			"response": []
+		},
+		{
+			"name": "Actualizar libro",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"pages\": 1200\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{base_url}}/book/6601970f589a753e4d1342df"
+			},
+			"response": []
+		},
+		{
+			"name": "Borrar libro",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "{{base_url}}/book/6601970f589a753e4d1342df"
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "localhost:3000",
+			"type": "string"
+		}
+	]
+}
